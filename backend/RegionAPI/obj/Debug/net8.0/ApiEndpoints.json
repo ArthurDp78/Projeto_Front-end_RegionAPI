@@ -1,0 +1,92 @@
+[
+  {
+    "ContainingType": "RegionAPI.Controllers.RegionController",
+    "Method": "GetRegionsList",
+    "RelativePath": "api/region",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegionAPI.Controllers.RegionController",
+    "Method": "CreatedRegion",
+    "RelativePath": "api/region",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "region",
+        "Type": "RegionAPI.ViewModels.RegionInputModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegionAPI.Controllers.RegionController",
+    "Method": "UpdatedRegion",
+    "RelativePath": "api/region",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regiao",
+        "Type": "RegionAPI.ViewModels.RegionInputModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegionAPI.Controllers.RegionController",
+    "Method": "GetRegionById",
+    "RelativePath": "api/region/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegionAPI.Controllers.RegionController",
+    "Method": "Ativar",
+    "RelativePath": "api/region/{id}/active",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegionAPI.Controllers.RegionController",
+    "Method": "Inactivate",
+    "RelativePath": "api/region/{id}/inactive",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
