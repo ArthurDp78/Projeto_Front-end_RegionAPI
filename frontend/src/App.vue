@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
+import { mdiPencil, mdiCheck, mdiClose } from '@mdi/js';
 
 // URL base da sua API .NET
 const API = 'https://localhost:7278/api/region';
@@ -73,7 +74,6 @@ onMounted(carregarRegioes);
 <template>
   <div class="container">
     <h2>Cadastro de Regiões</h2>
-
     <form @submit.prevent="salvar" class="form-regiao">
       <label >UF</label>
       <select v-model="uf" required>
@@ -110,10 +110,22 @@ onMounted(carregarRegioes);
           <td :class="r.ativo ? 'ativo' : 'inativo'">
             {{ r.ativo ? 'Ativo' : 'Inativo' }}
           </td>
-          <td>
-            <a href="#" @click.prevent="editar(r)">Editar</a> |
-            <a v-if="r.ativo" href="#" @click.prevent="inativar(r.id)">Inativar</a>
-            <a v-else href="#" @click.prevent="ativar(r.id)">Ativar</a>
+          <td class="acoes">
+            <button class="icon-button" @click="editar(r)" title="Editar">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path :d="mdiPencil" fill="currentColor"/>
+              </svg>
+            </button>
+            <button v-if="r.ativo" class="icon-button danger" @click="inativar(r.id)" title="Inativar">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path :d="mdiClose" fill="currentColor"/>
+              </svg>
+            </button>
+            <button v-else class="icon-button success" @click="ativar(r.id)" title="Ativar">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path :d="mdiCheck" fill="currentColor"/>
+              </svg>
+            </button>
           </td>
         </tr>
       </tbody>
@@ -185,27 +197,94 @@ button.cancelar:hover {
 
 .tabela {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .tabela th, .tabela td {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding: 12px;
   text-align: center;
+  background: white;
+}
+
+.tabela th {
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.tabela tr:last-child td {
+  border-bottom: none;
+}
+
+.tabela th:last-child,
+.tabela td:last-child {
+  border-right: none;
 }
 
 .ativo {
-  color: green;
+  color: rgb(16, 199, 16);
   font-weight: bold;
 }
 
 .inativo {
-  color: red;
+  color: rgb(212, 16, 16);
   font-weight: bold;
 }
 
 a {
   color: blue;
   cursor: pointer;
+}
+
+.acoes {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-button {
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: #666;
+}
+
+.icon-button:hover {
+  background: #e0e0e0;
+  transform: scale(1.1);
+}
+
+.icon-button.danger {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.icon-button.danger:hover {
+  background: #ffcdd2;
+}
+
+.icon-button.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.icon-button.success:hover {
+  background: #c8e6c9;
 }
 </style>
