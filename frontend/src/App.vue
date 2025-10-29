@@ -77,7 +77,7 @@ const salvar = async () => {
     await carregarRegioes();
   } catch (error) {
     popupMessage.value =
-      error.response?.data?.message || "Erro: região já existe!";
+      error.response?.data?.message || "Região já existe!";
     popupType.value = "error";
   } finally {
     showPopup.value = true;
@@ -110,7 +110,7 @@ onMounted(carregarRegioes);
 
 <template>
   <div class="container">
-    <!-- Pop-up dinâmico -->
+
     <!-- Pop-up dinâmico -->
     <div v-if="showPopup" class="popup-overlay" @click.self="closePopup">
       <div class="popup" :class="popupType">
@@ -235,13 +235,12 @@ h2 {
   color: white;
   font-size: 1.9rem;
   font-weight: 600;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   margin-bottom: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
   letter-spacing: 1px;
-  width: 50%;
   align-self: center;
 }
 
@@ -309,7 +308,6 @@ h2::before {
 
 .popup-buttons button:first-child {
   background-color: #f44336;
-  /* vermelho para confirmar ação perigosa */
 }
 
 .popup-buttons button:first-child:hover {
@@ -318,7 +316,6 @@ h2::before {
 
 .popup-buttons button:last-child {
   background-color: #9e9e9e;
-  /* cinza para cancelar/ok */
 }
 
 .popup-buttons button:last-child:hover {
@@ -333,7 +330,6 @@ h2::before {
   background-color: #45a049;
 }
 
-/* Estilo para popup de erro */
 .popup.error .popup-buttons button {
   background-color: #f44336;
 }
@@ -346,6 +342,12 @@ h2::before {
   border-top: 4px solid #ff9800;
 }
 
+.popup.success {
+  border-top: 4px solid #45a049;
+}
+.popup.error {
+  border-top: 4px solid #d32f2f;
+}
 input,
 select {
   padding: 8px;

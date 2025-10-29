@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\arthu\\source\\repos\\ArthurDp78\\Projeto_Front-end_RegionAPI\\backend\\",
+  "WorkspaceRootPath": "C:\\Users\\Cliente\\Desktop\\Projeto_Front-end_RegionAPI\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8963FD8C-BF72-44D5-90F3-94D37DB7A5F9}|RegionAPI\\RegionAPI.csproj|c:\\users\\arthu\\source\\repos\\arthurdp78\\projeto_front-end_regionapi\\backend\\regionapi\\regionapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{8963FD8C-BF72-44D5-90F3-94D37DB7A5F9}|RegionAPI\\RegionAPI.csproj|c:\\users\\cliente\\desktop\\projeto_front-end_regionapi\\backend\\regionapi\\regionapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{8963FD8C-BF72-44D5-90F3-94D37DB7A5F9}|RegionAPI\\RegionAPI.csproj|solutionrelative:regionapi\\regionapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RegionAPI.csproj",
-              "DocumentMoniker": "C:\\Users\\arthu\\source\\repos\\ArthurDp78\\Projeto_Front-end_RegionAPI\\backend\\RegionAPI\\RegionAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\Cliente\\Desktop\\Projeto_Front-end_RegionAPI\\backend\\RegionAPI\\RegionAPI.csproj",
               "RelativeDocumentMoniker": "RegionAPI\\RegionAPI.csproj",
-              "ToolTip": "C:\\Users\\arthu\\source\\repos\\ArthurDp78\\Projeto_Front-end_RegionAPI\\backend\\RegionAPI\\RegionAPI.csproj",
+              "ToolTip": "C:\\Users\\Cliente\\Desktop\\Projeto_Front-end_RegionAPI\\backend\\RegionAPI\\RegionAPI.csproj",
               "RelativeToolTip": "RegionAPI\\RegionAPI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-10-29T01:28:04.067Z",
               "EditorCaption": ""
